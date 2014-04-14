@@ -1,0 +1,993 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"up",
+				"upwardForce"
+			],
+			[
+				"for",
+				"forward"
+			],
+			[
+				"dis",
+				"distToGround"
+			],
+			[
+				"Jum",
+				"Jumping"
+			],
+			[
+				"Wa",
+				"WaitForFixedUpdate"
+			],
+			[
+				"fas",
+				"false"
+			],
+			[
+				"Fall",
+				"Falling"
+			],
+			[
+				"level",
+				"levelSectionCount"
+			],
+			[
+				"diff",
+				"difficultyFactorYMul"
+			],
+			[
+				"leve",
+				"levelSectionCount"
+			],
+			[
+				"prefa",
+				"prefabCheckpointTrigger"
+			],
+			[
+				"di",
+				"distanceTraveled"
+			],
+			[
+				"Vec",
+				"Vector3"
+			],
+			[
+				"chec",
+				"checkpointDistance"
+			],
+			[
+				"check",
+				"checkPointPosition"
+			],
+			[
+				"las",
+				"lastCloneIsNotSimple"
+			],
+			[
+				"ga",
+				"gameObject"
+			],
+			[
+				"spaw",
+				"spawnPosition"
+			],
+			[
+				"star",
+				"startLine"
+			],
+			[
+				"duckc",
+				"duckCountAtDeath"
+			],
+			[
+				"player",
+				"playerState"
+			],
+			[
+				"last",
+				"lastLandedPosition"
+			],
+			[
+				"Camera",
+				"cameraObject"
+			],
+			[
+				"pla",
+				"playerDead"
+			],
+			[
+				"camera",
+				"cameraObject"
+			],
+			[
+				"Get",
+				"GetComponent"
+			],
+			[
+				"game",
+				"GameObject"
+			],
+			[
+				"re",
+				"renderers"
+			],
+			[
+				"Gma",
+				"GameObject"
+			],
+			[
+				"score",
+				"scoreResult"
+			],
+			[
+				"jumpPo",
+				"jumpImpulseMultiplierBonus"
+			],
+			[
+				"Gmae",
+				"GameUI"
+			],
+			[
+				"Wai",
+				"WaitForSeconds"
+			],
+			[
+				"is",
+				"isKinematic"
+			],
+			[
+				"colli",
+				"collider"
+			],
+			[
+				"PLA",
+				"PlayerRB"
+			],
+			[
+				"ta",
+				"transform"
+			],
+			[
+				"wa",
+				"WaitForFixedUpdate"
+			],
+			[
+				"ren",
+				"renderer"
+			],
+			[
+				"pri",
+				"print(\"prefab"
+			],
+			[
+				"swim",
+				"swimToTarget"
+			],
+			[
+				"swi",
+				"swimDirection"
+			],
+			[
+				"Player",
+				"PlayerRB"
+			],
+			[
+				"duck",
+				"duckCount"
+			],
+			[
+				"death",
+				"deathTriggerY"
+			],
+			[
+				"anim",
+				"animDeath"
+			],
+			[
+				"trigger",
+				"triggerDeath"
+			],
+			[
+				"jumpImp",
+				"jumpImpulseMultiplierBonus"
+			],
+			[
+				"jumpB",
+				"jumpBonusFadeRunning"
+			],
+			[
+				"bonus",
+				"jumpImpulseMultiplierBonus"
+			],
+			[
+				"jm",
+				"jumpImpulseMultiplierBonus"
+			],
+			[
+				"bonu",
+				"bonusType"
+			],
+			[
+				"buns",
+				"bonusExplEffect"
+			],
+			[
+				"jumpm",
+				"jumpImpulseMultiplier"
+			],
+			[
+				"clone",
+				"clonePrototype"
+			],
+			[
+				"wait",
+				"WaitForFixedUpdate"
+			],
+			[
+				"guiRs",
+				"guiResultValue"
+			],
+			[
+				"diffu",
+				"difficultyFactorX"
+			],
+			[
+				"scor",
+				"scoreCurrent"
+			],
+			[
+				"jum",
+				"jumpUpgradeLevel"
+			],
+			[
+				"jumpU",
+				"jumpUpgradeScores"
+			],
+			[
+				"jumpUp",
+				"jumpUpgradeLevel"
+			],
+			[
+				"sco",
+				"scoreResult"
+			],
+			[
+				"dea",
+				"deathMenu"
+			],
+			[
+				"Spanw",
+				"spawnPosition"
+			],
+			[
+				"Pla",
+				"PlayerRB"
+			],
+			[
+				"pl",
+				"playerBody"
+			],
+			[
+				"int",
+				"Instantiate"
+			],
+			[
+				"curre",
+				"currentPosition"
+			],
+			[
+				"hi",
+				"hingeJoint"
+			],
+			[
+				"whee",
+				"wheel_front"
+			],
+			[
+				"paretn",
+				"parentBody"
+			],
+			[
+				"ui_whe",
+				"ui_wheelie_time_text"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"wheeli",
+				"ui_wheelie_time_text"
+			],
+			[
+				"moto",
+				"motoRotation"
+			],
+			[
+				"tim",
+				"Time"
+			],
+			[
+				"ui_s",
+				"ui_speedo_text"
+			],
+			[
+				"moso",
+				"motoSpeedMin"
+			],
+			[
+				"cl",
+				"clutch"
+			],
+			[
+				"thro",
+				"throttleMaxPower"
+			],
+			[
+				"gma",
+				"GameObject"
+			],
+			[
+				"brea",
+				"breakForceMin"
+			],
+			[
+				"break",
+				"breakForceMax"
+			],
+			[
+				"Brea",
+				"breakForce"
+			],
+			[
+				"allow",
+				"allowNeutral"
+			],
+			[
+				"allo",
+				"allowNeutral"
+			],
+			[
+				"parent",
+				"parent"
+			],
+			[
+				"in",
+				"Input"
+			],
+			[
+				"coll",
+				"collider"
+			],
+			[
+				"an",
+				"angularVelocity"
+			],
+			[
+				"thr",
+				"throttleGainInertMin"
+			],
+			[
+				"th",
+				"throttleGainInertMax"
+			],
+			[
+				"le",
+				"Lerp"
+			],
+			[
+				"pare",
+				"parentJoint"
+			],
+			[
+				"Time",
+				"deltaTime"
+			],
+			[
+				"vec",
+				"Vector3"
+			],
+			[
+				"ve",
+				"velocity"
+			],
+			[
+				"Smooth",
+				"SmoothDamp"
+			],
+			[
+				"thrott",
+				"throttleValue"
+			],
+			[
+				"Fixed",
+				"FixedUpdate"
+			],
+			[
+				"new",
+				"new_level_parent"
+			],
+			[
+				"Rand",
+				"RandomBoolean"
+			],
+			[
+				"lasCloneI",
+				"lastCloneIsNotSimple"
+			],
+			[
+				"offse",
+				"offsetXYDiff"
+			],
+			[
+				"offsetR",
+				"offsetRandomX"
+			],
+			[
+				"o",
+				"offsetRandomX"
+			],
+			[
+				"Offs",
+				"offsetRandomY"
+			],
+			[
+				"trig",
+				"triggerPosition"
+			],
+			[
+				"prefabListComplex",
+				"prefabListComplexProb"
+			],
+			[
+				"ra",
+				"RandomBoolean"
+			],
+			[
+				"rand",
+				"randomSeedCounter"
+			],
+			[
+				"clne",
+				"clonePrototype"
+			],
+			[
+				"Ra",
+				"Range"
+			],
+			[
+				"Vector",
+				"Vector2"
+			],
+			[
+				"prefabZoomTrigger",
+				"prefabZoomTrigger_9"
+			],
+			[
+				"mat",
+				"Mathf"
+			],
+			[
+				"ofs",
+				"offsetRandomY"
+			],
+			[
+				"Ran",
+				"Random"
+			],
+			[
+				"cloneOff",
+				"cloneOffsetMax"
+			],
+			[
+				"tota",
+				"totalBounds"
+			],
+			[
+				"offs",
+				"offsetRandomY"
+			],
+			[
+				"off",
+				"offsetRandomY"
+			],
+			[
+				"bo",
+				"bounds"
+			],
+			[
+				"guiDea",
+				"guiDeathBound"
+			],
+			[
+				"GUI",
+				"GUIData"
+			],
+			[
+				"gui",
+				"guiDeath"
+			],
+			[
+				"Vecto",
+				"Vector3"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/karmalsky/Dropbox/projects/Projects DB/MatLab/todo.txt",
+			"settings":
+			{
+				"buffer_size": 362,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"brac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"visi",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"brack",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inst",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/NGUI/Scripts/Editor/PropertyReferenceDrawer.cs",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/CameraControl.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/heli/HeliRotors.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/FakePerspective.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/DuckSwim.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/GUIData.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/LevelGeneratorDecor.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/LevelDestroyParent.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/LevelCheckpoint.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/LevelCheckpoint.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/GameUI.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/CommonShit.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/todo.txt",
+		"/Users/karmalsky/Dropbox/projects/Projects DB/CrazyInsaneJump/todo.txt",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/PlayerAnim.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/PlayerBodySwim.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/LevelGenerator.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/Test/RBFly.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/Bonus.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/PlayerRB.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/ai/Zombie.js",
+		"/Users/karmalsky/Dropbox/Public/zombiecopter/web/zombiecopter.html",
+		"/Users/karmalsky/Dropbox/Public/wheelie_sim_web/wheelie_sim/wheelie_sim.html",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/PlayerFaceAnim.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/system/Base.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/CameraZoomTrigger.js",
+		"/Users/karmalsky/Dropbox/Public/crazyjump_web/crazyjump.html",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/heli/HeliControl.js",
+		"/Volumes/tzk109.nic.ua/public_html/index.html",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/PlatformFalling.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/Scripts/ToDo.js",
+		"/Users/karmalsky/Projects Unity/wheelie_sim/Assets/system/CameraControl.js",
+		"/Users/karmalsky/Projects Unity/wheelie_sim/Assets/MotoBody.js",
+		"/Users/karmalsky/Projects Unity/wheelie_sim/Assets/Moto.js",
+		"/Library/Application Support/TheFoundry/RLM/xf_foundry.lic",
+		"/Users/karmalsky/Downloads/THE_FOUNDRY_NUKEX_V8.0V1_MACOSX64-XFORCE (1)/xfnuke8osx/Crack/xf_foundry.lic",
+		"/Users/karmalsky/Downloads/XFORCE/Crack/xf_foundry.lic",
+		"/Applications/TheFoundry/LicensingTools7.0/bin/RLM/rlm.foundry",
+		"/Users/karmalsky/Dropbox/soft/akson.txt",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/LevelGenerator.js",
+		"/Users/karmalsky/Projects Unity/crazyjump/Assets/BoundsPrinter.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/ai/AIManager.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/GameRules.js",
+		"/Users/karmalsky/Dropbox/Takoe/Xyc9_250/1_buy_nao.txt",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/GameRules.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/system/Water.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/ai/Human.js",
+		"/Users/karmalsky/Projects Unity/yoga/yoga1/Assets/PreviewSpawner.js",
+		"/Users/karmalsky/Projects Unity/yoga/yoga1/Assets/pfx_fire/WpnFireball.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/weapons/WpnProjectileAmmo.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/HealthManager.js",
+		"/Users/karmalsky/Projects Unity/yoga/yoga1/Assets/scripts/weapons/WpnNapalmAmmo.js",
+		"/Users/karmalsky/Projects Unity/yoga/yoga1/Assets/scripts/FxExplosionLight.js",
+		"/Users/karmalsky/Projects Unity/yoga/yoga1/Assets/scripts/weapons/WpnRocketLauncher.js",
+		"/Users/karmalsky/Projects Unity/yoga/yoga1/Assets/scripts/weapons/WpnFireball.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/system/UI.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/FxExplosionLight.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/Music.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/test/array/ArrayTest.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/ArrayTest.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/weapons/WpnNapalmAmmo.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/DestructableHomeBase.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/weapons/RechargeAmmo.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/test/Rope.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/test/TubeRenderer.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/Todo.js",
+		"/Users/karmalsky/Dropbox/projects/Projects DB/Helisilu/todo.txt",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/ai/AISpawner.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/EnvColor.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/CameraIntro.js",
+		"/Users/karmalsky/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/karmalsky/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/weapons/WpnRocketLauncher.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/weapons/WpnNapalmCannon.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/heli/Upgrades.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/weapons/WpnProjectileCannon.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/heli/HeliLights.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/shaders/normalmap_clip.shader",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/shaders/unlit_diffuse_color.shader",
+		"/Users/karmalsky/Downloads/builtin_shaders-4.2.0/DefaultResourcesExtra/Particle Add.shader",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/shaders/unlit_color_alpha.shader",
+		"/Users/karmalsky/Downloads/builtin_shaders-4.2.0/DefaultResourcesExtra/Particle AddSmooth.shader",
+		"/Users/karmalsky/Downloads/builtin_shaders-4.2.0/DefaultResourcesExtra/Particle Alpha Blend.shader",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/AnimStart.js",
+		"/Users/karmalsky/Projects Unity/mirrorracer/Assets/test/CameraControl.js",
+		"/Users/karmalsky/Projects Unity/mirrorracer/Assets/vehicles/VehicleControl.js",
+		"/Users/karmalsky/Projects Unity/siluheli/Assets/scripts/system/PlatformSpecific.js",
+		"/Users/karmalsky/Projects Unity/mirrorracer/Assets/test/camerascript.js",
+		"/Users/karmalsky/Projects/crazyjump/Assets/Scripts/CameraControl.js",
+		"/Users/karmalsky/Projects/crazyjump/Assets/shaders/unlit_diffuse_color.shader",
+		"/Users/karmalsky/Projects/crazyjump/Assets/shaders/giu_text_color_by_mask.shader",
+		"/Users/karmalsky/Projects/crazyjump/Assets/Scripts/CameraZoomTrigger.js",
+		"/Users/karmalsky/Projects/crazyjump/Assets/Scripts/GUIData.js",
+		"/Users/karmalsky/Projects/crazyjump/Assets/Scripts/PlayerRB.js",
+		"/Users/karmalsky/Projects/crazyjump/Assets/Scripts/CommonShit.js",
+		"/Users/karmalsky/Downloads/builtin_shaders-4.2.0/DefaultResources/Font.shader",
+		"/Users/karmalsky/Downloads/builtin_shaders-4.2.0/DefaultResourcesExtra/Unlit/Unlit-Alpha.shader",
+		"/Users/karmalsky/Projects/crazyjump/Assets/Scripts/GameUI.js",
+		"/Users/karmalsky/Projects/siluheli/Assets/scripts/ai/Zombie.js",
+		"/Users/karmalsky/Dropbox/projects/unity/Helisilu/todo.txt",
+		"/Users/karmalsky/Projects/siluheli/Assets/EnvironmentControl.js",
+		"/Users/karmalsky/Projects/siluheli/Assets/scripts/ai/Human.js",
+		"/Users/karmalsky/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/karmalsky/Projects/siluheli/Assets/scripts/FxExplosionLight.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open files>,<open folders>",
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"UNITY_3_5",
+			"rect",
+			"fall",
+			"print(",
+			"jumpCooldownTime",
+			"umbrellaAllowed",
+			"layerMaskPlayer",
+			"IsGrounded",
+			"playerGrounded",
+			"IsGrounded",
+			"layerMaskPlayer",
+			"IsGrounded",
+			"playerGrounded",
+			"Landed",
+			"jumpButton",
+			"umbrellaUsedOnce",
+			"material",
+			"difficultyFactorY",
+			"difficultyFactorX",
+			"print(",
+			"startline",
+			"fall",
+			"woot",
+			"startLine",
+			"spawnPosition",
+			"startLine",
+			"distanceTraveled",
+			"spawnPosition",
+			"prefabDestroyParentTrigger",
+			"print",
+			"last",
+			"lastCheckpointPosition",
+			"lastCloneIsNotSimple",
+			"prefabComplex",
+			"spawnPosition",
+			"lastla",
+			"lastLandedPosition",
+			"fall",
+			"lastLandedPosition",
+			"startLine",
+			"distanceTraveled",
+			"spawnPosition",
+			"spawnpos",
+			"ducks at",
+			"InstaRespawn",
+			"playerLimbs",
+			"duckCountAtDeath",
+			"duckCoundAtDeath",
+			"fallt",
+			"lastLandedPosition",
+			"CheckPlayerState",
+			"playerGroundedTime",
+			"playerGroundedTimer",
+			"firstGroundTouch",
+			"lastGroundedTime",
+			"grounded",
+			"duckCount",
+			"duck",
+			"jumpCooldownTime",
+			"cooldown",
+			"jumpImpulseVariationSpeed",
+			"bonusCount",
+			"scoreTotal",
+			"duckCount",
+			"bonusCount",
+			"jumpUpgradeLevel",
+			"bonusCount",
+			"trigger",
+			"water",
+			"CommonShit.Respawn",
+			"rdead",
+			"jumpUpgradeLevel",
+			"guiJumpPower",
+			"scoreCurrent",
+			"deathMenu",
+			"guiDeath",
+			"guiJumpPowerDefaultScale",
+			"guiBonusCount",
+			"guiResultValueDefaultScale",
+			"guiScoreValueDefaultScale",
+			"scoreCurrent",
+			"uck",
+			"duck",
+			"currentPosition",
+			"RandomBoolean",
+			"randomboo",
+			"CheckPlayerState",
+			"duckCount",
+			"deathTriggerY",
+			"FallToDeath",
+			"bodyDead",
+			"fingerCount",
+			"collision",
+			"grounde",
+			"print",
+			"bonusCount",
+			"jumpImpulseMultiplier",
+			"lastCloneIsFrozen",
+			"froze",
+			"clonesPerSectionMax",
+			"web",
+			"progressframeimage",
+			"scoreJumpPenaltyAccum",
+			"penal",
+			"guiControl",
+			"GUIData",
+			"GUIDaata",
+			"pulsatio",
+			"scoreCurrent",
+			"bonusCount",
+			"scoreCurrent",
+			"scorecurre",
+			"guiBonusCount",
+			"GUIDeath",
+			"playerbo",
+			"scr",
+			"sc",
+			"scr",
+			"scoreCurrent",
+			"guiScoreValue",
+			"round",
+			"playerDead",
+			"ScoreCalculation",
+			"for (",
+			"scoreResult",
+			"scoreCurrent",
+			"Respawn",
+			"PostDataToServer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"duckCountAtDeath",
+			"guiJumpPower",
+			"cloneDecor",
+			"brake",
+			"ZombieCounter",
+			"zombiesGlobalMaximum",
+			"zombiesGlobalAlive",
+			"uiBaseState",
+			"humanHouseTag",
+			"rechargeHealthPackAllowed",
+			"healthPack",
+			"HeliDamageStates"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/karmalsky/Dropbox/projects/Projects DB/MatLab/todo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 124.0
+	},
+	"project": "matlab.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Projects Unity/siluheli/siluheli.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
