@@ -7,6 +7,7 @@ var cellText : GameObject;
 
 var uiWin : GameObject;
 var uiLose : GameObject;
+private var finished = false;
 
 static var currentValue = 1;
 private var cellTextText : TextMesh;
@@ -20,6 +21,7 @@ function Start() {
 	transform.position.y = Mathf.Round(transform.position.y);
 	cellTextText = cellText.GetComponent(TextMesh);
 	GeneratePath();
+	FX();
 }
 
 
@@ -27,8 +29,15 @@ var neighbourCell : GameObject;
 var randomDir : Vector3[];
 
 function GeneratePath() {
+	var generateAttempts = 0;
 	var newPos = transform.position;
 	for (var i = 2; i < 21; i++) {
+		yield WaitForFixedUpdate;
+		generateAttempts += 1;
+		if (generateAttempts > 100) {
+			// Cheap hack to avoid failed path builds
+			Application.LoadLevel(Application.loadedLevel);
+		}
 		var oldPos = newPos;
 		newPos += randomDir[Random.Range(0,randomDir.length)];
 		var busyCell = Physics.Raycast(newPos - Vector3.forward, Vector3.forward);
@@ -74,7 +83,6 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 	var neighbourExists = false;
 	var consumingAllowed = false;
 
-	var finished = false;
 
 /////////////// raycasting shit - move it to a separate method
 	var raycastDir = Vector3.zero;
@@ -146,9 +154,42 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 		}
 	}
 	yield WaitForFixedUpdate;
+
+/////////////// Checking for possible further movements
+	var possibleConsumables = false;
+	for (var eachDirection in randomDir) {
+		if (Physics.Raycast(transform.position, eachDirection, hit, raycastDistance)) {
+			if (hit.collider.name == "finish") {
+				possibleConsumables = true;
+			} else {
+				var possibleConsumablesValue = int.Parse(hit.collider.name);
+			}
+			if (possibleConsumablesValue == currentValue + 1) { //rule here
+				possibleConsumables = true;
+			}
+		}
+	}
+	if (!possibleConsumables) {
+		uiLose.SetActive(true);
+		yield WaitForSeconds (2.5);
+		Application.LoadLevel(Application.loadedLevel);
+	}
+/////////////// Checking for possible further movements
 	allowMovementInput = true;
 }
 
+
+var materialPulse : Material;
+
+function FX() {
+	var materialDefault = renderer.material;
+	while(!finished) {
+		renderer.material = materialPulse;
+		yield WaitForSeconds(0.75);
+		renderer.material = materialDefault;
+		yield WaitForSeconds(0.75);
+	}
+}
 
 function Update () {
 	if (Input.GetButtonDown("Horizontal")) {
