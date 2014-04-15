@@ -5,14 +5,42 @@ var stepSize = 1.0;
 var gridSize = 10;
 var cellText : GameObject;
 
-private var allowMovementInput = true;
-private var raycastDistance = 1.0;
-private var currentValue = 1;
+static var currentValue = 1;
 private var cellTextText : TextMesh;
+
 
 function Start() {
 	cellTextText = cellText.GetComponent(TextMesh);
+	GeneratePath();
 }
+
+
+var neighbourCell : GameObject;
+
+function GeneratePath() {
+	var startPos = transform.position;
+	var newPos : Vector3;
+	GenerateFillEmpty();
+}
+
+function GenerateFillEmpty() {
+	var startPos = transform.position;
+	var newPos : Vector3;
+	for (var iy = 0; iy < 10; iy++ ) {
+		for (var ix = 0; ix < 10; ix++ ) {
+			if (!Physics.Raycast(newPos - Vector3.forward, Vector3.forward)) {
+				var newClone : GameObject = Instantiate(neighbourCell, newPos, Quaternion.identity);
+			}
+			newPos.x += 1;
+		}
+		newPos.x = 0;
+		newPos.y += 1;
+	}
+}
+
+
+private var allowMovementInput = true;
+private var raycastDistance = 1.0;
 
 function Movement(moveHorizontal : boolean, moveSign : int) {
 	allowMovementInput = false;
@@ -32,8 +60,6 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 	if (Physics.Raycast(transform.position, raycastDir, hit, raycastDistance)) {
 		neighbourExists = true;
 		neighbourValue = int.Parse(hit.collider.name);
-		print(neighbourExists);
-		print ("neighbour: " + neighbourValue);
 	}
 /////////////// raycasting shit - move it to a separate method
 
@@ -68,7 +94,6 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 			Destroy(hit.collider.gameObject);
 			currentValue = neighbourValue;
 			cellTextText.text = currentValue.ToString();
-			print("current: " + currentValue);
 		}
 	}
 	allowMovementInput = true;
