@@ -15,14 +15,14 @@ function Start () {
 function SetValue() {
 	yield WaitForFixedUpdate;
 	if (gameObject.name == "finish") {
-		currentValue = 20;
+		currentValue = 20*CellPlayer.rule;
 		gameObject.tag = "Untagged";
 		Destroy(cellText);
 	} else {
 		if (gameObject.name == "random_number") {
-			currentValue = Random.Range(0, 20);
+			currentValue = Random.Range(0, 20*CellPlayer.rule);
 		} else {
-			currentValue = int.Parse(gameObject.name);
+			currentValue = int.Parse(gameObject.name)*CellPlayer.rule;
 		}
 	}
 	UpdateVisuals();
@@ -34,7 +34,7 @@ function UpdateVisuals() {
 		renderer.material = materialFinish;
 	} else {
 		gameObject.name = currentValue.ToString();
-		if (currentValue == CellPlayer.currentValue + 1) {
+		if (currentValue == CellPlayer.currentValue + 1*CellPlayer.rule) {
 			renderer.material = materialGranted;
 		} else {
 			renderer.material = materialDenied;

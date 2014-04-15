@@ -3,10 +3,12 @@
 
 var stepSize = 1.0;
 var gridSize = 10;
+static var rule = 1;
 var cellText : GameObject;
 
 var uiWin : GameObject;
 var uiLose : GameObject;
+var uiRule : GameObject;
 var uiCover : GameObject;
 
 private var finished = false;
@@ -16,13 +18,15 @@ private var cellTextText : TextMesh;
 
 
 function Start() {
+	uiRule.guiText.text = "rule:\n+" + rule.ToString();
 	uiCover.SetActive(true);
-	currentValue = 1;
+	currentValue = rule;
 	transform.position.x = Random.Range(1,8);
 	transform.position.x = Mathf.Round(transform.position.x);
 	transform.position.y = Random.Range(1,8);
 	transform.position.y = Mathf.Round(transform.position.y);
 	cellTextText = cellText.GetComponent(TextMesh);
+	cellTextText.text = currentValue.ToString();
 	GeneratePath();
 	FX();
 }
@@ -108,7 +112,7 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 		if (hit.collider.name != "finish") {
 			neighbourValue = int.Parse(hit.collider.name);
 		} else {
-			neighbourValue = 20;
+			neighbourValue = 20*rule;
 			finished = true;
 		}
 	}
@@ -117,7 +121,7 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 	if (neighbourExists) {
 
 	/////////////// checking neighbour value
-		if (neighbourValue == currentValue + 1) {
+		if (neighbourValue == currentValue + (1*rule)) {
 			consumingAllowed = true;
 		}
 	/////////////// checking neighbour value
@@ -158,6 +162,8 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 			}
 //			Destroy(eachNeighbour);
 		}
+		rule += 1;
+
 		Application.LoadLevel(Application.loadedLevel);
 	} else {
 		for (var eachNeighbour in allNeighbours) {
@@ -175,7 +181,7 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 			} else {
 				var possibleConsumablesValue = int.Parse(hit.collider.name);
 			}
-			if (possibleConsumablesValue == currentValue + 1) { //rule here
+			if (possibleConsumablesValue == currentValue + (1 * rule)) { //rule here
 				possibleConsumables = true;
 			}
 		}
