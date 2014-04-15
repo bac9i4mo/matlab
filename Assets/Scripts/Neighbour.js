@@ -5,23 +5,37 @@ private var cellTextText : TextMesh;
 private var currentValue : int;
 var materialGranted : Material;
 var materialDenied : Material;
+var materialFinish : Material;
 
 function Start () {
 	cellTextText = cellText.GetComponent(TextMesh);
 	SetValue();
-	UpdateVisuals();
 }
 
 function SetValue() {
-	currentValue = Random.Range(0, 20);
+	yield WaitForFixedUpdate;
+	if (gameObject.name == "finish") {
+		currentValue = 20;
+	} else {
+		if (gameObject.name == "random_number") {
+			currentValue = Random.Range(0, 20);
+		} else {
+			currentValue = int.Parse(gameObject.name);
+		}
+	}
+	UpdateVisuals();
 }
 
 function UpdateVisuals() {
-	gameObject.name = currentValue.ToString();
 	cellTextText.text = currentValue.ToString();
-	if (currentValue == CellPlayer.currentValue + 1) {
-		renderer.material = materialGranted;
+	if (gameObject.name == "finish") {
+		renderer.material = materialFinish;
 	} else {
-		renderer.material = materialDenied;
+		gameObject.name = currentValue.ToString();
+		if (currentValue == CellPlayer.currentValue + 1) {
+			renderer.material = materialGranted;
+		} else {
+			renderer.material = materialDenied;
+		}
 	}
 }

@@ -5,31 +5,56 @@ var stepSize = 1.0;
 var gridSize = 10;
 var cellText : GameObject;
 
+var uiWin : GameObject;
+var uiLose : GameObject;
+
 static var currentValue = 1;
 private var cellTextText : TextMesh;
 
 
 function Start() {
+	currentValue = 1;
+	transform.position.x = Random.Range(0,9);
+	transform.position.x = Mathf.Round(transform.position.x);
+	transform.position.y = Random.Range(0,9);
+	transform.position.y = Mathf.Round(transform.position.y);
 	cellTextText = cellText.GetComponent(TextMesh);
 	GeneratePath();
 }
 
 
 var neighbourCell : GameObject;
+var randomDir : Vector3[];
 
 function GeneratePath() {
-	var startPos = transform.position;
-	var newPos : Vector3;
+	var newPos = transform.position;
+	for (var i = 2; i < 21; i++) {
+		var oldPos = newPos;
+		newPos += randomDir[Random.Range(0,randomDir.length)];
+		var busyCell = Physics.Raycast(newPos - Vector3.forward, Vector3.forward);
+		if (!busyCell && (newPos.x < gridSize) && (newPos.y < gridSize) && (newPos.x >= 0) && (newPos.y >= 0)) {
+			var newClone : GameObject = Instantiate(neighbourCell, newPos, Quaternion.identity);
+			if (i == 20) {
+				newClone.name = "finish";
+			} else {
+				newClone.name = i.ToString();
+			}
+		} else {
+			newPos = oldPos;
+			i -= 1;
+		}
+	}
 	GenerateFillEmpty();
 }
 
 function GenerateFillEmpty() {
-	var startPos = transform.position;
-	var newPos : Vector3;
-	for (var iy = 0; iy < 10; iy++ ) {
-		for (var ix = 0; ix < 10; ix++ ) {
-			if (!Physics.Raycast(newPos - Vector3.forward, Vector3.forward)) {
+	var newPos = Vector3.zero;
+	for (var iy = 0; iy < 10; iy++) {
+		for (var ix = 0; ix < 10; ix++) {
+			var busyCell = Physics.Raycast(newPos - Vector3.forward, Vector3.forward);
+			if (!busyCell) {
 				var newClone : GameObject = Instantiate(neighbourCell, newPos, Quaternion.identity);
+				newClone.name = "random_number";
 			}
 			newPos.x += 1;
 		}
@@ -49,6 +74,8 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 	var neighbourExists = false;
 	var consumingAllowed = false;
 
+	var finished = false;
+
 /////////////// raycasting shit - move it to a separate method
 	var raycastDir = Vector3.zero;
 	if (moveHorizontal) {
@@ -59,7 +86,12 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 	var hit : RaycastHit;
 	if (Physics.Raycast(transform.position, raycastDir, hit, raycastDistance)) {
 		neighbourExists = true;
-		neighbourValue = int.Parse(hit.collider.name);
+		if (hit.collider.name != "finish") {
+			neighbourValue = int.Parse(hit.collider.name);
+		} else {
+			neighbourValue = 20;
+			finished = true;
+		}
 	}
 /////////////// raycasting shit - move it to a separate method
 
@@ -96,6 +128,24 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 			cellTextText.text = currentValue.ToString();
 		}
 	}
+	yield WaitForFixedUpdate;
+	var allNeighbours = GameObject.FindGameObjectsWithTag("neighbour");
+	if (finished) {
+		uiWin.SetActive(true);
+		for (var eachNeighbour in allNeighbours) {
+			for (var ia = 0.0; ia < 2.0; ia++) {
+				eachNeighbour.transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, ia/2);
+				yield WaitForFixedUpdate;
+			}
+//			Destroy(eachNeighbour);
+		}
+		Application.LoadLevel(Application.loadedLevel);
+	} else {
+		for (var eachNeighbour in allNeighbours) {
+			eachNeighbour.GetComponent(Neighbour).UpdateVisuals();
+		}
+	}
+	yield WaitForFixedUpdate;
 	allowMovementInput = true;
 }
 
