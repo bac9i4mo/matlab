@@ -7,6 +7,8 @@ var cellText : GameObject;
 
 var uiWin : GameObject;
 var uiLose : GameObject;
+var uiCover : GameObject;
+
 private var finished = false;
 
 static var currentValue = 1;
@@ -14,10 +16,11 @@ private var cellTextText : TextMesh;
 
 
 function Start() {
+	uiCover.SetActive(true);
 	currentValue = 1;
-	transform.position.x = Random.Range(0,9);
+	transform.position.x = Random.Range(1,8);
 	transform.position.x = Mathf.Round(transform.position.x);
-	transform.position.y = Random.Range(0,9);
+	transform.position.y = Random.Range(1,8);
 	transform.position.y = Mathf.Round(transform.position.y);
 	cellTextText = cellText.GetComponent(TextMesh);
 	GeneratePath();
@@ -32,9 +35,9 @@ function GeneratePath() {
 	var generateAttempts = 0;
 	var newPos = transform.position;
 	for (var i = 2; i < 21; i++) {
-		yield WaitForFixedUpdate;
+		yield WaitForSeconds(0.0025);  //some kind of yield needed in generation loop to save from hanging up
 		generateAttempts += 1;
-		if (generateAttempts > 100) {
+		if (generateAttempts > 60) {
 			// Cheap hack to avoid failed path builds
 			Application.LoadLevel(Application.loadedLevel);
 		}
@@ -47,12 +50,19 @@ function GeneratePath() {
 				newClone.name = "finish";
 			} else {
 				newClone.name = i.ToString();
+				var newFakePos = newPos + randomDir[Random.Range(0,randomDir.length)];
+				busyCell = Physics.Raycast(newFakePos - Vector3.forward, Vector3.forward);
+				if (!busyCell && (newFakePos.x < gridSize) && (newFakePos.y < gridSize) && (newFakePos.x >= 0) && (newFakePos.y >= 0)) {
+					var fakeClone : GameObject = Instantiate(neighbourCell, newFakePos, Quaternion.identity);
+					fakeClone.name = (i + Random.Range(1,3)).ToString();
+				}
 			}
 		} else {
 			newPos = oldPos;
 			i -= 1;
 		}
 	}
+	uiCover.SetActive(false);
 	GenerateFillEmpty();
 }
 
@@ -69,6 +79,7 @@ function GenerateFillEmpty() {
 		}
 		newPos.x = 0;
 		newPos.y += 1;
+		yield WaitForFixedUpdate;
 	}
 }
 

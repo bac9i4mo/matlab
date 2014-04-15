@@ -16,6 +16,8 @@ function SetValue() {
 	yield WaitForFixedUpdate;
 	if (gameObject.name == "finish") {
 		currentValue = 20;
+		gameObject.tag = "Untagged";
+		Destroy(cellText);
 	} else {
 		if (gameObject.name == "random_number") {
 			currentValue = Random.Range(0, 20);
