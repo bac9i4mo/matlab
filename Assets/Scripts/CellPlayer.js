@@ -15,10 +15,16 @@ private var finished = false;
 
 static var currentValue = 1;
 private var cellTextText : TextMesh;
-
+private var uiRuleOriginalPos : Vector3;
 
 function Start() {
 	uiRule.guiText.text = "rule:\n+" + rule.ToString();
+
+	uiRule.guiText.anchor = TextAnchor.MiddleCenter;
+	uiRule.guiText.fontSize = 128;
+	uiRuleOriginalPos = uiRule.transform.position;
+	uiRule.transform.position = Vector3(0.5, 0.5, 0);
+
 	uiCover.SetActive(true);
 	currentValue = rule;
 	transform.position.x = Random.Range(1,8);
@@ -66,6 +72,9 @@ function GeneratePath() {
 			i -= 1;
 		}
 	}
+	uiRule.guiText.anchor = TextAnchor.MiddleRight;
+	uiRule.guiText.fontSize = 32;
+	uiRule.transform.position = uiRuleOriginalPos;
 	uiCover.SetActive(false);
 	GenerateFillEmpty();
 }
@@ -208,7 +217,45 @@ function FX() {
 	}
 }
 
+
+
+private var fp : Vector2;  // first finger position
+private var lp : Vector2;  // last finger position
+
 function Update () {
+
+	for (var touch : Touch in Input.touches) {
+		if (touch.phase == TouchPhase.Began) {
+			fp = touch.position;
+			lp = touch.position;
+		}
+		if (touch.phase == TouchPhase.Moved ) {
+			lp = touch.position;
+		}
+		if(touch.phase == TouchPhase.Ended) {
+			if((fp.x - lp.x) > 40) {
+				if (allowMovementInput) {
+					Movement(true, -1.0);
+				}
+			}
+			else if((fp.x - lp.x) < -40) {
+				if (allowMovementInput) {
+					Movement(true, 1.0);
+				}
+			}
+			else if((fp.y - lp.y) > 40 ) {
+				if (allowMovementInput) {
+					Movement(false, -1.0);
+				}
+			}
+			else if((fp.y - lp.y) < -40 ) {
+				if (allowMovementInput) {
+					Movement(false, 1.0);
+				}
+			}
+		}
+	}
+
 	if (Input.GetButtonDown("Horizontal")) {
 		if (allowMovementInput) {
 			Movement(true, Input.GetAxis("Horizontal"));
@@ -220,3 +267,5 @@ function Update () {
 		}
 	}
 }
+
+
