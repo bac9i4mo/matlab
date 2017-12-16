@@ -18,10 +18,10 @@ private var cellTextText : TextMesh;
 private var uiRuleOriginalPos : Vector3;
 
 function Start() {
-	uiRule.guiText.text = "rule:\n+" + rule.ToString();
+	uiRule.GetComponent.<GUIText>().text = "rule:\n+" + rule.ToString();
 
-	uiRule.guiText.anchor = TextAnchor.MiddleCenter;
-	uiRule.guiText.fontSize = 128;
+	uiRule.GetComponent.<GUIText>().anchor = TextAnchor.MiddleCenter;
+	uiRule.GetComponent.<GUIText>().fontSize = 128;
 	uiRuleOriginalPos = uiRule.transform.position;
 	uiRule.transform.position = Vector3(0.5, 0.5, 0);
 
@@ -72,8 +72,8 @@ function GeneratePath() {
 			i -= 1;
 		}
 	}
-	uiRule.guiText.anchor = TextAnchor.MiddleRight;
-	uiRule.guiText.fontSize = 32;
+	uiRule.GetComponent.<GUIText>().anchor = TextAnchor.MiddleRight;
+	uiRule.GetComponent.<GUIText>().fontSize = 32;
 	uiRule.transform.position = uiRuleOriginalPos;
 	uiCover.SetActive(false);
 	GenerateFillEmpty();
@@ -208,11 +208,11 @@ function Movement(moveHorizontal : boolean, moveSign : int) {
 var materialPulse : Material;
 
 function FX() {
-	var materialDefault = renderer.material;
+	var materialDefault = GetComponent.<Renderer>().material;
 	while(!finished) {
-		renderer.material = materialPulse;
+		GetComponent.<Renderer>().material = materialPulse;
 		yield WaitForSeconds(0.75);
-		renderer.material = materialDefault;
+		GetComponent.<Renderer>().material = materialDefault;
 		yield WaitForSeconds(0.75);
 	}
 }

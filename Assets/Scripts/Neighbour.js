@@ -31,13 +31,13 @@ function SetValue() {
 function UpdateVisuals() {
 	cellTextText.text = currentValue.ToString();
 	if (gameObject.name == "finish") {
-		renderer.material = materialFinish;
+		GetComponent.<Renderer>().material = materialFinish;
 	} else {
 		gameObject.name = currentValue.ToString();
 		if (currentValue == CellPlayer.currentValue + 1*CellPlayer.rule) {
-			renderer.material = materialGranted;
+			GetComponent.<Renderer>().material = materialGranted;
 		} else {
-			renderer.material = materialDenied;
+			GetComponent.<Renderer>().material = materialDenied;
 		}
 	}
 }
