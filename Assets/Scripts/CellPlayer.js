@@ -11,6 +11,7 @@ var uiLose : GameObject;
 var uiRule : GameObject;
 var uiCover : GameObject;
 
+
 private var finished = false;
 
 static var currentValue = 1;
